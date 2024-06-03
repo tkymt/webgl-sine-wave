@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>WebGL Sine wave</title>
+
+    <script id="vs" type="x-shader/x-vertex">
+      attribute vec3 position;
+
+      void main()
+      {
+        gl_Position = vec4(position, 1.0);
+        gl_PointSize = 5.0;
+      }
+    </script>
+
+    <script id="fs" type="x-shader/x-fragment">
+      precision mediump float;
+
+      void main()
+      {
+        gl_FragColor = vec4(0.0, 1.0, 1.0, 1.0);
+      }
+    </script>
+
+    <script defer type="text/javascript" src="index.js"></script>
+  </head>
+
+  <body>
+    <canvas></canvas>
+  </body>
+</html>
